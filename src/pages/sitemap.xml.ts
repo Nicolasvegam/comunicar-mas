@@ -6,21 +6,10 @@ function generateSiteMap() {
   // Páginas estáticas principales
   const staticPages = [
     '',
-    '/servicios',
-    '/sobre-nosotros', 
-    '/contacto',
-    '/preguntas-frecuentes'
   ];
 
-  // Servicios específicos
-  const services = [
-    '/servicios/fonoaudiologia-infantil',
-    '/servicios/terapia-ocupacional',
-    '/servicios/psicologia-infantil',
-    '/servicios/evaluacion-integral'
-  ];
 
-  const allPages = [...staticPages, ...services];
+  const allPages = [...staticPages];
 
   return `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
