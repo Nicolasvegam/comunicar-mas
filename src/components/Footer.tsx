@@ -84,9 +84,6 @@ const Footer = () => {
               <li className="text-muted-foreground">
                 Holanda 099, piso 9, oficina 904
               </li>
-              <li className="text-muted-foreground">
-                +56 9 1234 5678
-              </li>
               <li>
                 <a href="mailto:comunicarmascl@gmail.com" className="text-muted-foreground hover:text-comunicar-lavender transition-colors">
                   comunicarmascl@gmail.com

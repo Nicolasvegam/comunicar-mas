@@ -39,6 +39,7 @@ const TestimonialsSection = () => {
 
   useEffect(() => {
     if (autoplay) {
+      // @ts-ignore
       timerRef.current = setInterval(() => {
         nextTestimonial();
       }, 5000);

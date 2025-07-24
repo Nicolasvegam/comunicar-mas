@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import { MapPin, Clock, Phone, Mail, Calendar } from "lucide-react";
-import { Resend } from 'resend';
-import { Helmet } from 'react-helmet-async';
-import { localBusinessSchema } from '@/lib/schemas';
+import { MapPin, Clock, Mail, Calendar } from "lucide-react";
+
 
 const ContactItem = ({ icon: Icon, title, children }: { icon: React.ElementType, title: string, children: React.ReactNode }) => {
   return (
@@ -29,59 +27,31 @@ const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState({ type: '', message: '' });
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.id]: e.target.value
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus({ type: '', message: '' });
 
-    // IMPORTANTE: En producción, deberías usar una API route o serverless function
-    // para proteger tu API key. Usar la API key en el frontend la expone públicamente.
-    
-    const resend = new Resend('re_aYT7w48B_E8bcL3RmvhgGYSyyVsAE8g8S');
-
     try {
-      const { data, error } = await resend.emails.send({
-        from: 'Comunicar Más <onboarding@resend.dev>',
-        to: ['nicolas@carvuk.com'],
-        subject: `Nueva consulta de ${formData.name} - ${formData.service}`,
-        html: `
-          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-            <h2 style="color: #6d4e93;">Nueva consulta desde el formulario web</h2>
-            
-            <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
-              <h3 style="color: #333; margin-top: 0;">Información del contacto:</h3>
-              
-              <p><strong>Nombre:</strong> ${formData.name}</p>
-              <p><strong>Teléfono:</strong> ${formData.phone}</p>
-              <p><strong>Email:</strong> ${formData.email}</p>
-              <p><strong>Servicio solicitado:</strong> ${formData.service}</p>
-              
-              ${formData.message ? `
-                <div style="margin-top: 20px;">
-                  <strong>Mensaje:</strong>
-                  <p style="background-color: white; padding: 15px; border-radius: 4px; border-left: 4px solid #6d4e93;">
-                    ${formData.message}
-                  </p>
-                </div>
-              ` : ''}
-            </div>
-            
-            <p style="color: #666; font-size: 14px; margin-top: 30px;">
-              Este correo fue enviado desde el formulario de contacto de www.comunicarmas.cl
-            </p>
-          </div>
-        `,
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
 
-      if (error) {
-        throw error;
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || 'Error al enviar el correo');
       }
 
       setSubmitStatus({
@@ -134,16 +104,15 @@ const ContactForm = () => {
           </div>
           <div>
             <label htmlFor="phone" className="block text-sm font-medium mb-1 text-gray-700">
-              Teléfono
+              Teléfono (opcional)
             </label>
             <input
               type="tel"
               id="phone"
               value={formData.phone}
               onChange={handleChange}
-              required
               className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-comunicar-lavender focus:border-comunicar-lavender transition-colors"
-              placeholder="+56 9 1234 5678"
+              placeholder="Tu número de teléfono"
             />
           </div>
         </div>
@@ -212,12 +181,6 @@ const ContactForm = () => {
 const ContactSection = () => {
   return (
     <section id="contacto" className="relative overflow-hidden">
-      <Helmet>
-        <script type="application/ld+json">
-          {JSON.stringify(localBusinessSchema)}
-        </script>
-      </Helmet>
-      
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-comunicar-lavender/20 rounded-full blur-3xl opacity-20 transform translate-x-1/4 -translate-y-1/4"></div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -243,10 +206,6 @@ const ContactSection = () => {
                   <p className="text-sm mt-1">Sábados: Con cita previa</p>
                 </ContactItem>
                 
-                <ContactItem icon={Phone} title="Teléfono">
-                  <p className="font-medium">WhatsApp: +56 9 1234 5678</p>
-                  <p className="text-sm mt-1">Respuesta en menos de 24 horas</p>
-                </ContactItem>
                 
                 <ContactItem icon={Mail} title="Email">
                   <a 
@@ -260,7 +219,7 @@ const ContactSection = () => {
               
               <div className="mt-6 pt-6 border-t border-gray-200">
                 <p className="text-sm text-gray-600">
-                  <strong>Áreas de cobertura:</strong> Las Condes, Providencia, 
+                  <strong>Recibimos pacientes de:</strong> Las Condes, Providencia, 
                   Ñuñoa, Vitacura, La Reina y toda la Región Metropolitana
                 </p>
               </div>

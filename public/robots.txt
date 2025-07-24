@@ -1,7 +1,17 @@
+# Robots.txt para Comunicar Más - Centro de Terapias Infantiles
+# https://www.comunicarmas.cl
+
+User-agent: *
+Allow: /
+
+# Permitir específicamente a los bots principales
 User-agent: Googlebot
 Allow: /
 
-User-agent: Bingbot
+User-agent: Bingbot  
+Allow: /
+
+User-agent: Slurp
 Allow: /
 
 User-agent: Twitterbot
@@ -10,7 +20,36 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
-Allow: /
+# Bloquear rutas administrativas y de desarrollo
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+Disallow: /.well-known/
+Disallow: /404
+Disallow: /500
 
+# Permitir archivos CSS y JS para mejor renderizado
+Allow: /_next/static/
+Allow: /favicon.ico
+Allow: /images/
+Allow: /*.css
+Allow: /*.js
+
+# Sitemap
 Sitemap: https://www.comunicarmas.cl/sitemap.xml
+
+# Crawl-delay para evitar sobrecarga del servidor
+Crawl-delay: 1
+
+# Bloquear bots malintencionados comunes
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot  
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /

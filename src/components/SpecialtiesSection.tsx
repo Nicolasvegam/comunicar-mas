@@ -39,6 +39,13 @@ const SpecialtyCard = ({
   bgColor,
   iconColor,
   index,
+}: {
+  icon: React.ElementType;
+  title: string;
+  description: string;
+  bgColor: string;
+  iconColor: string;
+  index: number;
 }) => {
   return (
     <div

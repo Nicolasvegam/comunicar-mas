@@ -7,25 +7,25 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 240 10% 20%;
+    --foreground: 240 15% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 20%;
+    --card-foreground: 240 15% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 20%;
+    --popover-foreground: 240 15% 15%;
 
     --primary: 260 30% 81%; /* Lavender color */
     --primary-foreground: 0 0% 100%;
 
     --secondary: 187 72% 79%; /* Blue color */
-    --secondary-foreground: 0 0% 20%;
+    --secondary-foreground: 240 15% 15%;
 
     --muted: 210 20% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted-foreground: 215.4 16.3% 35%;
 
     --accent: 55 90% 80%; /* Yellow color */
-    --accent-foreground: 240 10% 20%;
+    --accent-foreground: 240 15% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -97,11 +97,26 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display font-semibold text-gray-800;
+    @apply font-display font-semibold text-gray-900;
   }
 
   section {
     @apply py-12 md:py-24;
+  }
+
+  /* Mejoras de legibilidad */
+  p, li {
+    @apply text-gray-800 text-base md:text-lg leading-relaxed;
+  }
+
+  /* Texto más grande para elementos de texto importantes */
+  .text-larger {
+    @apply text-lg md:text-xl;
+  }
+
+  /* Contraste mejorado para texto secundario */
+  .text-muted-improved {
+    @apply text-gray-700;
   }
 }
 
@@ -115,11 +130,11 @@
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl font-display font-bold mb-4 text-center text-gray-800;
+    @apply text-4xl md:text-5xl font-display font-bold mb-4 text-center text-gray-900;
   }
 
   .section-subtitle {
-    @apply text-xl text-gray-600 max-w-3xl mx-auto text-center mb-12;
+    @apply text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto text-center mb-12 leading-relaxed;
   }
 }
 

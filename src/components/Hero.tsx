@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowDown, Calendar } from "lucide-react";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -16,24 +17,24 @@ const Hero = () => {
       <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center relative z-10">
         <div className="text-center md:text-left">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-in">
-            Centro de <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6d4e93] to-[#7c5bad] font-extrabold">Intervención Temprana</span> en Santiago
+            Centro de <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6d4e93] to-[#7c5bad] font-extrabold">Terapias Infantiles</span> Santiago
           </h1>
           <h2 className="mt-4 text-2xl md:text-3xl font-semibold text-gray-700">
-            Comunicar Más: Desarrollo Infantil Integral
+            Fonoaudiología, Terapia Ocupacional y Psicología Infantil
           </h2>
           <p className="mt-6 text-xl text-muted-foreground max-w-xl mx-auto md:mx-0">
-            Especialistas en <strong>Fonoaudiología</strong>, <strong>Terapia Ocupacional</strong> y 
-            <strong> Psicología Infantil</strong>. Atención personalizada para niños de 0 a 6 años.
+            Especialistas en <strong>fonoaudiología infantil</strong>, <strong>terapia ocupacional pediátrica</strong> y 
+            <strong> psicología infantil en Santiago</strong>. Evaluaciones integrales y tratamientos personalizados para el desarrollo de tu hijo.
           </p>
           <div className="mt-6 flex flex-wrap gap-3 justify-center md:justify-start">
-            <span className="px-4 py-2 bg-comunicar-lavender/10 text-comunicar-lavender rounded-full text-sm font-medium">
+            <span className="px-4 py-2  text-indigo-800 rounded-full text-sm font-medium">
               TEA/Autismo
             </span>
-            <span className="px-4 py-2 bg-comunicar-green/10 text-comunicar-green rounded-full text-sm font-medium">
+            <span className="px-4 py-2  text-green-800 rounded-full text-sm font-medium">
               Retraso del Lenguaje
             </span>
-            <span className="px-4 py-2 bg-comunicar-yellow/10 text-comunicar-yellow rounded-full text-sm font-medium">
-              Desarrollo Motor
+            <span className="px-4 py-2  text-amber-800 rounded-full text-sm font-medium">
+              Integración Sensorial
             </span>
           </div>
           <div className="mt-10 flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
@@ -42,25 +43,26 @@ const Hero = () => {
               className="btn-primary flex items-center gap-2 w-full sm:w-auto justify-center"
             >
               <Calendar size={20} />
-              Agendar Evaluación Inicial
+              Agendar Evaluación Gratuita
             </a>
             <a
               href="#especialidades"
               className="flex items-center gap-2 font-medium hover:text-comunicar-lavender transition-colors mt-4 sm:mt-0"
             >
-              Conoce nuestros servicios
+              Ver nuestras especialidades
               <ArrowDown size={18} />
             </a>
           </div>
         </div>
         <div className="relative hidden md:block">
           <div className="relative z-10 animate-float">
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=100"
-              alt="Centro de intervención temprana Comunicar Más - Niños en terapia de desarrollo infantil"
+              alt="Centro de terapias infantiles Santiago - Fonoaudiología, terapia ocupacional y psicología para niños"
               className="rounded-2xl shadow-xl object-cover h-[500px] max-w-full"
               loading="eager"
-              fetchPriority="high"
+              width={1000}
+              height={1000}
             />
           </div>
           <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-comunicar-yellow/30 rounded-full blur-2xl opacity-30"></div>

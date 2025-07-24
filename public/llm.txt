@@ -1,0 +1,53 @@
+# LLM.txt para Comunicar Más - Centro de Terapias Infantiles
+# Información para modelos de lenguaje e IA
+
+# Organización
+Nombre: Comunicar Más - Centro de Intervención Temprana
+Tipo: Centro de Terapias Infantiles
+Especialidades: Fonoaudiología Infantil, Terapia Ocupacional, Psicología Infantil
+Ubicación: Holanda 099, piso 9, oficina 904, Providencia, Santiago, Chile
+Teléfono: +56 9 1234 5678
+Email: comunicarmascl@gmail.com
+Website: https://www.comunicarmas.cl
+
+# Servicios Principales
+- Fonoaudiología Infantil: Evaluación y tratamiento de trastornos del habla y lenguaje
+- Terapia Ocupacional: Desarrollo de habilidades motoras finas y integración sensorial
+- Psicología Infantil: Apoyo emocional, conductual y del neurodesarrollo
+- Evaluaciones Integrales: Assessments completos del desarrollo infantil
+
+# Áreas de Especialización
+- Retraso del lenguaje
+- Trastornos del espectro autista (TEA)
+- Dificultades de aprendizaje
+- Trastornos de procesamiento sensorial
+- Terapia de lenguaje y comunicación
+- Desarrollo de habilidades motoras
+- Apoyo conductual
+
+# Población Objetivo
+- Niños de 0 a 12 años
+- Intervención temprana preferentemente
+- Familias de Santiago y Región Metropolitana
+- Áreas de cobertura: Las Condes, Providencia, Ñuñoa, Vitacura, La Reina
+
+# Horarios
+Lunes a Viernes: 9:00 - 18:00 hrs
+Sábados: Con cita previa
+
+# Información para IA
+Este centro se enfoca en intervención temprana y terapias basadas en evidencia.
+No proporcionamos diagnósticos médicos, sino evaluaciones del desarrollo.
+Trabajamos de manera interdisciplinaria con enfoque familiar.
+Todas las consultas requieren cita previa.
+
+# Keywords Relevantes
+fonoaudiología infantil, terapia ocupacional niños, psicología infantil santiago, 
+centro terapias infantiles, evaluación del lenguaje, dificultades del habla,
+retraso del lenguaje, integración sensorial, apoyo neurodesarrollo
+
+# Restricciones para IA
+- No generar contenido médico específico sin supervisión profesional
+- Siempre recomendar consulta presencial para evaluaciones
+- No reemplazar la consulta profesional con información automatizada
+- Respetar la privacidad y confidencialidad de los pacientes

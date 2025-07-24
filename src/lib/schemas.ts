@@ -9,7 +9,6 @@ export const organizationSchema = {
   "url": "https://www.comunicarmas.cl",
   "logo": "https://www.comunicarmas.cl/logo.png",
   "image": "https://www.comunicarmas.cl/centro-comunicar-mas.jpg",
-  "telephone": "+56 9 1234 5678",
   "email": "comunicarmascl@gmail.com",
   "address": {
     "@type": "PostalAddress",
@@ -129,7 +128,6 @@ export const localBusinessSchema = {
   "@type": "LocalBusiness",
   "name": "Comunicar Más",
   "image": "https://www.comunicarmas.cl/centro-comunicar-mas.jpg",
-  "telephone": "+56 9 1234 5678",
   "email": "comunicarmascl@gmail.com",
   "address": {
     "@type": "PostalAddress",
@@ -154,16 +152,34 @@ export const localBusinessSchema = {
   }
 };
 
-// FAQPage Schema
+// Enhanced FAQPage Schema for SEO
 export const getFAQSchema = (faqs: Array<{question: string, answer: string}>) => ({
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": faqs.map(faq => ({
+  "about": {
+    "@type": "MedicalSpecialty",
+    "name": "Intervención Temprana y Terapias Infantiles"
+  },
+  "inLanguage": "es-CL",
+  "url": "https://www.comunicarmas.cl/#faq",
+  "publisher": {
+    "@type": "MedicalOrganization",
+    "name": "Comunicar Más",
+    "url": "https://www.comunicarmas.cl"
+  },
+  "mainEntity": faqs.map((faq, index) => ({
     "@type": "Question",
     "name": faq.question,
+    "position": index + 1,
     "acceptedAnswer": {
       "@type": "Answer",
-      "text": faq.answer
+      "text": faq.answer,
+      "inLanguage": "es-CL",
+      "dateCreated": "2024-01-01",
+      "author": {
+        "@type": "Organization",
+        "name": "Comunicar Más"
+      }
     }
   }))
 });
