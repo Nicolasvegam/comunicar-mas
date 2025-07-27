@@ -5,7 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { getFAQSchema } from "@/lib/schemas";
+import { faqSchema } from "@/lib/structured-data";
 
 const faqs = [
   {
@@ -61,7 +61,6 @@ const faqs = [
 ];
 
 const FaqSection = () => {
-  const faqSchema = getFAQSchema(faqs);
   
   return (
     <>
