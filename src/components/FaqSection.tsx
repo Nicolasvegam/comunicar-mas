@@ -65,7 +65,6 @@ const FaqSection = () => {
   
   return (
     <>
-      {/* JSON-LD Structured Data for FAQ */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -125,12 +124,12 @@ const FaqSection = () => {
           </div>
           
           <div className="text-center mt-12">
-            <p className="text-muted-foreground mb-6">
+            <p className="text-gray-700 text-lg mb-6">
               ¿No encuentras la respuesta que buscas?
             </p>
             <a 
               href="#contacto"
-              className="inline-flex items-center px-6 py-3 bg-comunicar-purple text-white font-semibold rounded-lg hover:bg-comunicar-purple/90 transition-colors"
+              className="inline-flex items-center px-6 py-3 bg-comunicar-purple text-white font-semibold rounded-lg hover:bg-comunicar-purple/90 transition-colors shadow-lg hover:shadow-xl"
             >
               Contacta con nuestros especialistas
             </a>

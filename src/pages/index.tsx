@@ -8,7 +8,6 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
 import FaqSection from "@/components/FaqSection";
 import Footer from "@/components/Footer";
-import MobileBookingButton from "@/components/MobileBookingButton";
 import SEO from "@/components/SEO";
 import { organizationSchema, localBusinessSchema, faqSchema } from "@/lib/structured-data";
 
@@ -54,7 +53,6 @@ const Home = () => {
           <FaqSection />
         </main>
         <Footer />
-        <MobileBookingButton />
       </div>
     </>
   );
