@@ -43,7 +43,7 @@ const Hero = () => {
               className="btn-primary flex items-center gap-2 w-full sm:w-auto justify-center"
             >
               <Calendar size={20} />
-              Agendar Evaluación Gratuita
+              Agendar Cita
             </a>
             <a
               href="#especialidades"
