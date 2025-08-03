@@ -5,9 +5,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { faqSchema } from "@/lib/structured-data";
 
-const faqs = [
+export const faqs = [
   {
     question: "¿Cuándo consultar a un fonoaudiólogo infantil en Santiago? Señales de alerta en el desarrollo del lenguaje",
     answer:
@@ -26,20 +25,15 @@ const faqs = [
   {
     question: "¿Qué es la intervención temprana en Chile y por qué es crucial para el desarrollo infantil?",
     answer:
-      "La intervención temprana es un conjunto de servicios terapéuticos especializados dirigidos a bebés y niños de 0 a 6 años que presentan retrasos en el desarrollo, discapacidades o riesgo de presentarlos. Es fundamental porque aprovecha la neuroplasticidad del cerebro infantil durante los primeros años de vida, período crítico donde se logran los mejores resultados terapéuticos. En Comunicar Más, centro especializado en Santiago, ofrecemos intervención temprana multidisciplinaria que incluye fonoaudiología infantil, terapia ocupacional pediátrica y psicología del desarrollo, con un enfoque integral familia-centrado.",
+      "La intervención temprana es un conjunto de servicios terapéuticos especializados dirigidos a bebés y niños de 0 a 6 años que presentan retrasos en el desarrollo, discapacidades o riesgo de presentarlos. Es fundamental porque aprovecha la neuroplasticidad del cerebro infantil durante los primeros años de vida, período crítico donde se logran los mejores resultados terapéuticos. En Comunicar Más, espacio especializado en Santiago, ofrecemos intervención temprana multidisciplinaria que incluye fonoaudiología infantil, terapia ocupacional pediátrica y psicología del desarrollo, con un enfoque integral familia-centrado.",
   },
   {
-    question: "¿Cómo es la primera evaluación integral en Comunicar Más? Proceso de diagnóstico",
+    question: "Ubicación y horarios: ¿Dónde está el espacio Comunicar Más en Santiago?",
     answer:
-      "La primera evaluación integral incluye: entrevista semi-estructurada con los padres (anamnesis) para conocer historia del embarazo, parto, desarrollo temprano y preocupaciones actuales; observación clínica del niño en situación de juego libre y dirigido; aplicación de pruebas estandarizadas apropiadas para la edad (Bayley-III, TEPSI, EEDP, según corresponda); evaluación del desarrollo en áreas de comunicación, motricidad, cognición, socialización y autocuidado. Al finalizar, entregamos informe detallado con resultados, diagnóstico diferencial y recomendaciones específicas. El proceso puede requerir 1-3 sesiones dependiendo de la complejidad del caso y la edad del niño.",
+      "Nuestro espacio de intervención temprana está estratégicamente ubicado en Holanda 099, piso 9, oficina 904, Providencia, Santiago, con fácil acceso desde metro Manuel Montt y Los Leones. Atendemos familias de toda la Región Metropolitana, especialmente de Las Condes, Providencia, Ñuñoa, Vitacura, La Reina, Santiago Centro y Peñalolén. Contamos con estacionamiento para visitantes y nuestras instalaciones están adaptadas para niños con necesidades especiales. Horarios de atención: lunes a viernes de 8:00 a 19:00 hrs, sábados de 9:00 a 13:00 hrs. Ofrecemos flexibilidad horaria para familias trabajadoras.",
   },
   {
-    question: "Ubicación y horarios: ¿Dónde está el centro Comunicar Más en Santiago?",
-    answer:
-      "Nuestro centro de intervención temprana está estratégicamente ubicado en Holanda 099, piso 9, oficina 904, Providencia, Santiago, con fácil acceso desde metro Manuel Montt y Los Leones. Atendemos familias de toda la Región Metropolitana, especialmente de Las Condes, Providencia, Ñuñoa, Vitacura, La Reina, Santiago Centro y Peñalolén. Contamos con estacionamiento para visitantes y nuestras instalaciones están adaptadas para niños con necesidades especiales. Horarios de atención: lunes a viernes de 8:30 a 18:30 hrs, sábados de 9:00 a 13:00 hrs. Ofrecemos flexibilidad horaria para familias trabajadoras.",
-  },
-  {
-    question: "¿Atienden con seguro complementario de salud e Isapres? Opciones de financiamiento",
+    question: "¿Cómo funciona el reembolso con seguros complementarios e Isapres?",
     answer:
       "Sí, en Comunicar Más trabajamos con los principales seguros complementarios de salud y ofrecemos reembolso para Isapres (Cruz Blanca, Colmena, Consalud, Banmédica, Vida Tres). Al agendar tu consulta, consulta sobre las opciones específicas de reembolso disponibles para cada especialista. Emitimos boletas de honorarios y todos los documentos necesarios para tu reembolso. También ofrecemos planes de pago flexibles y descuentos por hermanos. Nuestros valores están dentro del rango promedio del mercado para terapias especializadas en Santiago.",
   },
@@ -56,26 +50,15 @@ const faqs = [
   {
     question: "Terapias para niños con síndrome de Down: Enfoque multidisciplinario especializado",
     answer:
-      "Sí, en Comunicar Más tenemos amplia experiencia de más de 10 años trabajando con niños con síndrome de Down y sus familias. Nuestro enfoque multidisciplinario incluye: fonoaudiología especializada para estimulación temprana del lenguaje, tratamiento de hipotonía oral y dificultades alimentarias; terapia ocupacional para desarrollo de motricidad fina, integración sensorial y habilidades de autonomía personal; psicología para apoyo emocional, conductual y desarrollo de habilidades sociales. Trabajamos con protocolos específicos para síndrome de Down, considerando las características típicas del desarrollo y las necesidades individuales de cada niño, siempre en coordinación con el equipo médico tratante.",
+      "Sí, en Comunicar Más tenemos amplia experiencia trabajando con niños con síndrome de Down y sus familias. Nuestro enfoque multidisciplinario incluye: fonoaudiología especializada para estimulación temprana del lenguaje, tratamiento de hipotonía oral y dificultades alimentarias; terapia ocupacional para desarrollo de motricidad fina, integración sensorial y habilidades de autonomía personal; psicología para apoyo emocional, conductual y desarrollo de habilidades sociales. Trabajamos con protocolos específicos para síndrome de Down, considerando las características típicas del desarrollo y las necesidades individuales de cada niño, siempre en coordinación con el equipo médico tratante.",
   },
 ];
 
 const FaqSection = () => {
-  
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
-        }}
-      />
-      
-      <section 
+    <section 
         id="faq" 
         className="bg-comunicar-lavender/10 relative overflow-hidden py-16 lg:py-24"
-        itemScope
-        itemType="https://schema.org/FAQPage"
       >
         <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-comunicar-pink/20 rounded-full blur-3xl opacity-20 transform -translate-x-1/4 translate-y-1/4"></div>
         
@@ -97,12 +80,9 @@ const FaqSection = () => {
                   key={index} 
                   value={`item-${index}`} 
                   className="border border-gray-200 rounded-lg bg-white shadow-sm"
-                  itemScope
-                  itemType="https://schema.org/Question"
                 >
                   <AccordionTrigger 
                     className="text-left px-6 py-5 hover:text-comunicar-lavender font-semibold text-lg group"
-                    itemProp="name"
                   >
                     <span className="pr-4 group-hover:text-comunicar-purple transition-colors">
                       {faq.question}
@@ -110,10 +90,8 @@ const FaqSection = () => {
                   </AccordionTrigger>
                   <AccordionContent 
                     className="px-6 pb-6 text-gray-700 leading-relaxed"
-                    itemScope
-                    itemType="https://schema.org/Answer"
                   >
-                    <div itemProp="text" className="prose prose-gray max-w-none">
+                    <div className="prose prose-gray max-w-none">
                       {faq.answer}
                     </div>
                   </AccordionContent>
@@ -135,7 +113,6 @@ const FaqSection = () => {
           </div>
         </div>
       </section>
-    </>
   );
 };
 
