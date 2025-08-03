@@ -17,7 +17,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center relative z-10">
         <div className="text-center md:text-left">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-in">
-            Centro de <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6d4e93] to-[#7c5bad] font-extrabold">Terapias Infantiles</span> Santiago
+          Espacio de <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6d4e93] to-[#7c5bad] font-extrabold">Terapias Infantiles</span> Santiago
           </h1>
           <h2 className="mt-4 text-2xl md:text-3xl font-semibold text-gray-700">
             Fonoaudiología, Terapia Ocupacional y Psicología Infantil
@@ -58,7 +58,7 @@ const Hero = () => {
           <div className="relative z-10 animate-float">
             <Image
               src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=100"
-              alt="Centro de terapias infantiles Santiago - Fonoaudiología, terapia ocupacional y psicología para niños"
+              alt="Espacio de terapias infantiles Santiago - Fonoaudiología, terapia ocupacional y psicología para niños"
               className="rounded-2xl shadow-xl object-cover h-[500px] max-w-full"
               loading="eager"
               width={1000}

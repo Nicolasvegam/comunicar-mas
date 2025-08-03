@@ -190,7 +190,7 @@ const ContactSection = () => {
           <div>
             <div className="bg-white p-8 rounded-2xl shadow-lg mb-8">
               <h3 className="text-xl font-bold text-gray-900 mb-6">
-                Centro de Intervención Temprana Comunicar Más
+              Espacio de Intervención Temprana Comunicar Más
               </h3>
               <div className="space-y-6">
                 <ContactItem icon={MapPin} title="Dirección">
@@ -234,7 +234,7 @@ const ContactSection = () => {
                 allowFullScreen={true}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Mapa Centro Comunicar Más - Holanda 099, Providencia"
+                title="Mapa Espacio Comunicar Más - Holanda 099, Providencia"
                 aria-label="Ubicación de Comunicar Más en Google Maps"
               ></iframe>
             </div>
