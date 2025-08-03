@@ -202,8 +202,8 @@ const ContactSection = () => {
                 </ContactItem>
                 
                 <ContactItem icon={Clock} title="Horario de atención">
-                  <p>Lunes a viernes: 9:00 - 18:00 hrs</p>
-                  <p className="text-sm mt-1">Sábados: Con cita previa</p>
+                  <p>Lunes a viernes: 8:00 - 19:00 hrs</p>
+                  <p className="text-sm mt-1">Sábados: 9:00 - 13:00 hrs</p>
                 </ContactItem>
                 
                 

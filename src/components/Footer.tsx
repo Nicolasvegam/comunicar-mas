@@ -90,7 +90,10 @@ const Footer = () => {
                 </a>
               </li>
               <li className="text-muted-foreground">
-                Lun-Vie: 9:00 - 18:00
+                Lun-Vie: 8:00 - 19:00
+              </li>
+              <li className="text-muted-foreground">
+                Sáb: 9:00 - 13:00
               </li>
             </ul>
           </div>
