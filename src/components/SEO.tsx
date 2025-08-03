@@ -12,9 +12,9 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
-  title = "Comunicar Más - Centro de Terapias Infantiles en Santiago | Fonoaudiología, Terapia Ocupacional, Psicología",
-  description = "Centro especializado en fonoaudiología infantil, terapia ocupacional y psicología para niños en Santiago. Evaluaciones integrales y tratamientos personalizados en Providencia. ¡Agenda tu consulta!",
-  keywords = "fonoaudiología infantil Santiago, terapia ocupacional niños, psicología infantil, centro terapias infantiles Providencia, evaluación del lenguaje, dificultades del habla, retraso del lenguaje, integración sensorial Santiago",
+  title = "Comunicar Más - Espacio de Terapias Infantiles en Santiago | Fonoaudiología, Terapia Ocupacional, Psicología",
+  description = "Espacio especializado en fonoaudiología infantil, terapia ocupacional y psicología para niños en Santiago. Evaluaciones integrales y tratamientos personalizados en Providencia. ¡Agenda tu consulta!",
+  keywords = "fonoaudiología infantil Santiago, terapia ocupacional niños, psicología infantil, espacio terapias infantiles Providencia, evaluación del lenguaje, dificultades del habla, retraso del lenguaje, integración sensorial Santiago",
   image = "/images/comunicar-mas-og.jpg",
   url = "https://www.comunicarmas.cl",
   type = "website",
@@ -29,7 +29,7 @@ const SEO: React.FC<SEOProps> = ({
       <title>{siteTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <meta name="author" content="Comunicar Más - Centro de Terapias Infantiles" />
+      <meta name="author" content="Comunicar Más - Espacio de Terapias Infantiles" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta charSet="utf-8" />
       

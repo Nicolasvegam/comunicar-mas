@@ -6,12 +6,15 @@ import ApproachSection from "@/components/ApproachSection";
 import TeamSection from "@/components/TeamSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
-import FaqSection from "@/components/FaqSection";
+import FaqSection, { faqs } from "@/components/FaqSection";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import { organizationSchema, localBusinessSchema, faqSchema } from "@/lib/structured-data";
+import { organizationSchema, localBusinessSchema } from "@/lib/structured-data";
+import { getFAQSchema } from "@/lib/schemas";
 
 const Home = () => {
+  const faqSchema = getFAQSchema(faqs);
+  
   const combinedSchema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -20,8 +23,8 @@ const Home = () => {
       faqSchema,
       {
         "@type": "WebPage",
-        "name": "Centro de Intervención Temprana Comunicar Más",
-        "description": "Centro especializado en fonoaudiología infantil, terapia ocupacional y psicología para niños en Santiago, Chile",
+        "name": "Espacio de Intervención Temprana Comunicar Más",
+        "description": "Espacio especializado en fonoaudiología infantil, terapia ocupacional y psicología para niños en Santiago, Chile",
         "url": "https://www.comunicarmas.cl",
         "isPartOf": {
           "@type": "WebSite",
@@ -35,9 +38,9 @@ const Home = () => {
   return (
     <>
       <SEO
-        title="Comunicar Más - Centro de Terapias Infantiles en Santiago | Fonoaudiología, Terapia Ocupacional, Psicología"
-        description="Centro especializado en fonoaudiología infantil, terapia ocupacional y psicología para niños en Santiago. Evaluaciones integrales y tratamientos personalizados en Providencia. ¡Agenda tu consulta!"
-        keywords="fonoaudiología infantil Santiago, terapia ocupacional niños, psicología infantil, centro terapias infantiles Providencia, evaluación del lenguaje, dificultades del habla, retraso del lenguaje, integración sensorial Santiago, apoyo neurodesarrollo, comunicar más"
+        title="Comunicar Más - Espacio de Terapias Infantiles en Santiago | Fonoaudiología, Terapia Ocupacional, Psicología"
+        description="Espacio especializado en fonoaudiología infantil, terapia ocupacional y psicología para niños en Santiago. Evaluaciones integrales y tratamientos personalizados en Providencia. ¡Agenda tu consulta!"
+        keywords="fonoaudiología infantil Santiago, terapia ocupacional niños, psicología infantil, espacio terapias infantiles Providencia, evaluación del lenguaje, dificultades del habla, retraso del lenguaje, integración sensorial Santiago, apoyo neurodesarrollo, comunicar más"
         url="https://www.comunicarmas.cl"
         structuredData={combinedSchema}
       />

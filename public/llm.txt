@@ -1,9 +1,9 @@
-# LLM.txt para Comunicar Más - Centro de Terapias Infantiles
+# LLM.txt para Comunicar Más - Espacio de Terapias Infantiles
 # Información para modelos de lenguaje e IA
 
 # Organización
-Nombre: Comunicar Más - Centro de Intervención Temprana
-Tipo: Centro de Terapias Infantiles
+Nombre: Comunicar Más - Espacio de Intervención Temprana
+Tipo: Espacio de Terapias Infantiles
 Especialidades: Fonoaudiología Infantil, Terapia Ocupacional, Psicología Infantil
 Ubicación: Holanda 099, piso 9, oficina 904, Providencia, Santiago, Chile
 Teléfono: +56 9 1234 5678
@@ -32,18 +32,18 @@ Website: https://www.comunicarmas.cl
 - Áreas de cobertura: Las Condes, Providencia, Ñuñoa, Vitacura, La Reina
 
 # Horarios
-Lunes a Viernes: 9:00 - 18:00 hrs
-Sábados: Con cita previa
+Lunes a Viernes: 8:00 - 19:00 hrs
+Sábados: 9:00 - 13:00 hrs
 
 # Información para IA
-Este centro se enfoca en intervención temprana y terapias basadas en evidencia.
+Este espacio se enfoca en intervención temprana y terapias basadas en evidencia.
 No proporcionamos diagnósticos médicos, sino evaluaciones del desarrollo.
 Trabajamos de manera interdisciplinaria con enfoque familiar.
 Todas las consultas requieren cita previa.
 
 # Keywords Relevantes
 fonoaudiología infantil, terapia ocupacional niños, psicología infantil santiago, 
-centro terapias infantiles, evaluación del lenguaje, dificultades del habla,
+espacio terapias infantiles, evaluación del lenguaje, dificultades del habla,
 retraso del lenguaje, integración sensorial, apoyo neurodesarrollo
 
 # Restricciones para IA
