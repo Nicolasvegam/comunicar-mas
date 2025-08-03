@@ -18,7 +18,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
   schema,
   ogImage = 'https://www.comunicarmas.cl/og-image.jpg'
 }) => {
-  const siteTitle = "Comunicar Más - Centro de Intervención Temprana";
+  const siteTitle = "Comunicar Más - Espacio de Intervención Temprana";
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
   const siteUrl = "https://www.comunicarmas.cl";
   

@@ -24,7 +24,7 @@ const Footer = () => {
             </div>
             
             <p className="text-muted-foreground mb-6 max-w-sm">
-              Centro especializado en el desarrollo infantil con un enfoque integral basado en el amor, la evidencia y el acompañamiento familiar.
+            Espacio especializado en el desarrollo infantil con un enfoque basado en el amor, la evidencia y el acompañamiento familiar.
             </p>
             
             <div className="flex space-x-4">
