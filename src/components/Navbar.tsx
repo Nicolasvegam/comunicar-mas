@@ -39,7 +39,7 @@ const Navbar = () => {
     { name: "Equipo", href: "#equipo" },
     { name: "Testimonios", href: "#testimonios" },
     { name: "Contacto", href: "#contacto" },
-    { name: "FAQ", href: "#faq" },
+    { name: "Preguntas", href: "#faq" },
   ];
 
   return (
