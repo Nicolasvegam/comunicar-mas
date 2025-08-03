@@ -4,11 +4,11 @@ export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "MedicalOrganization",
   "name": "Comunicar Más",
-  "alternateName": "Centro de Intervención Temprana Comunicar Más",
-  "description": "Centro especializado en intervención temprana, terapia ocupacional, fonoaudiología y psicología infantil en Santiago, Chile. Atendemos niños de 0 a 6 años y sus familias.",
+  "alternateName": "Espacio de Intervención Temprana Comunicar Más",
+  "description": "Espacio especializado en intervención temprana, terapia ocupacional, fonoaudiología y psicología infantil en Santiago, Chile. Atendemos niños de 0 a 6 años y sus familias.",
   "url": "https://www.comunicarmas.cl",
   "logo": "https://www.comunicarmas.cl/logo.png",
-  "image": "https://www.comunicarmas.cl/centro-comunicar-mas.jpg",
+  "image": "https://www.comunicarmas.cl/espacio-comunicar-mas.jpg",
   "email": "comunicarmascl@gmail.com",
   "address": {
     "@type": "PostalAddress",
@@ -27,8 +27,14 @@ export const organizationSchema = {
     {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
       "opens": "09:00",
-      "closes": "18:00"
+      "closes": "13:00"
     }
   ],
   "medicalSpecialty": [
@@ -127,7 +133,7 @@ export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Comunicar Más",
-  "image": "https://www.comunicarmas.cl/centro-comunicar-mas.jpg",
+  "image": "https://www.comunicarmas.cl/espacio-comunicar-mas.jpg",
   "email": "comunicarmascl@gmail.com",
   "address": {
     "@type": "PostalAddress",
@@ -143,7 +149,7 @@ export const localBusinessSchema = {
     "longitude": -70.6115
   },
   "url": "https://www.comunicarmas.cl",
-  "openingHours": "Mo-Fr 09:00-18:00",
+  "openingHours": "Mo-Fr 08:00-19:00, Sa 09:00-13:00",
   "priceRange": "$$",
   "aggregateRating": {
     "@type": "AggregateRating",
